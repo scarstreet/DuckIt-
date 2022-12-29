@@ -235,9 +235,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 196840510}
-  obj: {fileID: 1522729216997060, guid: 32026357c04e0e944835774b42e3c1b7, type: 3}
+  obj: {fileID: 5874803499498637878, guid: e11e4e4be1da7ac429893aa5ec8d0fdd, type: 3}
   raycastManager: {fileID: 1117238136}
-  useCursor: 0
+  useCursor: 1
 --- !u!4 &655725407
 Transform:
   m_ObjectHideFlags: 0
@@ -1004,7 +1004,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 1e-43}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
