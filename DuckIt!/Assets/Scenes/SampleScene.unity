@@ -242,7 +242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 026bb9ecf3378974d947681a0ec89027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMode: Duck
   panel: {fileID: 1802305504}
   ARCursor: {fileID: 655725405}
   panelVis: 1
@@ -499,6 +498,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursor: {fileID: 196840510}
   obj: {fileID: 5874803499498637878, guid: e11e4e4be1da7ac429893aa5ec8d0fdd, type: 3}
+  explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 3}
+  food: {fileID: 8575389795609162483, guid: 72f7713924360c14295e85883d1da829, type: 3}
   raycastManager: {fileID: 1117238136}
   useCursor: 1
   allDucks: []

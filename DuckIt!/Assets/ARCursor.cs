@@ -14,10 +14,12 @@ public class ARCursor : MonoBehaviour
 
   public bool useCursor = true;
   public List<GameObject> allDucks;
+  public List<GameObject> otherObjects;
   void Start()
   {
     cursor.SetActive(useCursor);
     allDucks = new List<GameObject>();
+    otherObjects = new List<GameObject>();
   }
 
   // Update is called once per frame
@@ -38,9 +40,11 @@ public class ARCursor : MonoBehaviour
 
       if (useCursor)
       {
-        GameObject newDuck = GameObject.Instantiate(toSummon, transform.position, transform.rotation);
+        GameObject newObj = GameObject.Instantiate(toSummon, transform.position, transform.rotation);
         if(UICtrl.currentMode == "Duck")
-          allDucks.Add(newDuck);
+          allDucks.Add(newObj);
+        else
+          otherObjects.Add(newObj);
       }
       else
       {
@@ -48,11 +52,15 @@ public class ARCursor : MonoBehaviour
         raycastManager.Raycast(Input.GetTouch(0).position, hits, UnityEngine.XR.ARSubsystems.TrackableType.Planes);
         if (hits.Count > 0)
         {
-          GameObject newDuck = GameObject.Instantiate(toSummon, hits[0].pose.position, hits[0].pose.rotation);
+          GameObject newObj = GameObject.Instantiate(toSummon, hits[0].pose.position, hits[0].pose.rotation);
           if (UICtrl.currentMode == "Duck")
-            allDucks.Add(newDuck);
+            allDucks.Add(newObj);
+          else
+            otherObjects.Add(newObj);
         }
       }
+      allDucks.RemoveAll(item => item == null);
+      otherObjects.RemoveAll(item => item == null);
     }
   }
   void UpdateCursor()

@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 8956031527661824073}
   - component: {fileID: 5469037547826210796}
   - component: {fileID: 7782532303705903910}
-  m_Layer: 0
+  - component: {fileID: 1567992529963921958}
+  - component: {fileID: 5151539409033497951}
+  m_Layer: 7
   m_Name: Udon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +83,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1567992529963921958
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8575389795609162483}
+  m_Material: {fileID: 13400000, guid: c2815a7ab32e42c4bb42f59caacb8ec1, type: 2}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7841444751630121341, guid: cffb8a2c466fd914ba032f71bee9c81d, type: 3}
+--- !u!114 &5151539409033497951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8575389795609162483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b429b8ea3bbfe844978e8865b12dd18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 64

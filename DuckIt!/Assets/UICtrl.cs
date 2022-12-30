@@ -27,8 +27,8 @@ public class UICtrl : MonoBehaviour
   public void wipeDucks()
   {
     ARCursor cursorScript = ARCursor.GetComponent<ARCursor>();
-    Debug.Log(cursorScript.allDucks.Count);
-    cursorScript.allDucks.ForEach((e) => { Debug.Log(e); Destroy(e); });
+    cursorScript.allDucks.ForEach((e) => {Destroy(e); });
+    cursorScript.otherObjects.ForEach((e) => {Destroy(e); });
   }
 
   public void togglePanelVis()
