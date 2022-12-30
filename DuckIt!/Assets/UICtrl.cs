@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class UICtrl : MonoBehaviour
 {
-  public string currentMode = "Duck";
+  static public string currentMode = "Duck";
   public GameObject panel;
   public GameObject ARCursor;
   public bool panelVis = true;
   // Start is called before the first frame update
   void Start()
   {
-    
+
   }
 
   // Update is called once per frame
