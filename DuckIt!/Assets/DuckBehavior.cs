@@ -7,6 +7,8 @@ public class DuckBehavior : MonoBehaviour
   // Start is called before the first frame update
   public LayerMask m_LayerMask;
   public Animator animator;
+  public AudioClip sleep, eat, quack, spin;
+  private AudioSource audioSrc;
   public bool isActing = false;
   public double cooldown;
   public string currentAct = "";
@@ -14,6 +16,7 @@ public class DuckBehavior : MonoBehaviour
   void Start()
   {
     animator = GetComponent<Animator>();
+    audioSrc = GetComponent<AudioSource>();
     cooldown = Random.Range(3, 6);
   }
 
@@ -65,4 +68,15 @@ public class DuckBehavior : MonoBehaviour
     }
   }
 
+  void playAudio(string audio) // sleep, quack, eat, spin
+  {
+    if(audio == "eat")
+      audioSrc.PlayOneShot(eat);
+    if (audio == "sleep")
+      audioSrc.PlayOneShot(sleep);
+    if (audio == "quack")
+      audioSrc.PlayOneShot(quack);
+    if (audio == "spin")
+      audioSrc.PlayOneShot(spin);
+  }
 }
