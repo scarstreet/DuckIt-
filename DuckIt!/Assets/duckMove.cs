@@ -25,7 +25,7 @@ public class duckMove : MonoBehaviour
         startedWalking = true;
       }
       transform.position += transform.forward * 0.09f * Time.deltaTime;
-      Debug.Log(transform.position);
+    //   Debug.Log(transform.position);
     }
     else
     {

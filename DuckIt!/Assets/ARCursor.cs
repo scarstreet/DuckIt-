@@ -11,9 +11,11 @@ public class ARCursor : MonoBehaviour
   // Start is called before the first frame update
 
   public bool useCursor = true;
+  public List<GameObject> allDucks;
   void Start()
   {
     cursor.SetActive(useCursor);
+    allDucks = new List<GameObject>();
   }
 
   // Update is called once per frame
@@ -26,12 +28,14 @@ public class ARCursor : MonoBehaviour
     if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
     {
         if(useCursor){
-        GameObject.Instantiate(obj, transform.position, transform.rotation);
+        GameObject newDuck = GameObject.Instantiate(obj, transform.position, transform.rotation);
+        allDucks.Add(newDuck);
       } else {
         List<ARRaycastHit> hits = new List<ARRaycastHit>();
         raycastManager.Raycast(Input.GetTouch(0).position, hits, UnityEngine.XR.ARSubsystems.TrackableType.Planes);
         if(hits.Count > 0) {
-          GameObject.Instantiate(obj, hits[0].pose.position, hits[0].pose.rotation);
+          GameObject newDuck = GameObject.Instantiate(obj, hits[0].pose.position, hits[0].pose.rotation);
+          allDucks.Add(newDuck);
         }
       }
     }
